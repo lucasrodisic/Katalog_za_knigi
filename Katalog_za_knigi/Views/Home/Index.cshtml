@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="fw-bold fs-1 text-white" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Book Catalog</h1>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-white bg-dark mb-4" style="cursor: pointer; height: 200px; border: 2px solid #004085; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);" onclick="location.href='@Url.Action("Index", "Books")'">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Books</h5>
+                    <p class="card-text">Explore the collection of books.</p>
+                    <p class="card-text">Here, you can add new books to your collection, update existing book details, and manage your book inventory efficiently.</p>
+                </div>
+            </div>
+            <div class="text-center mb-4">
+                <img src="~/images/books.png" alt="Books" class="img-fluid" style="max-height: 150px; width: auto;">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-dark mb-4" style="cursor: pointer; height: 200px; border: 2px solid #155724; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);" onclick="location.href='@Url.Action("Index", "Readers")'">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Readers</h5>
+                    <p class="card-text">View and manage readers.</p>
+                    <p class="card-text">Browse through your collection of readers. Use the search and filter options to find specific readers quickly.</p>
+                </div>
+            </div>
+            <div class="text-center mb-4">
+                <img src="~/images/readers.png" alt="Readers" class="img-fluid" style="max-height: 150px; width: auto;">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-dark mb-4" style="cursor: pointer; height: 200px; border: 2px solid #856404; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);" onclick="location.href='@Url.Action("Index", "Categories")'">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Categories</h5>
+                    <p class="card-text">Browse categories of books.</p>
+                    <p class="card-text">Browse through your list of book categories. Use the search and filter options to find specific categories quickly.</p>
+                </div>
+            </div>
+            <div class="text-center mb-4">
+                <img src="~/images/categories.png" alt="Categories" class="img-fluid" style="max-height: 150px; width: auto;">
+            </div>
+        </div>
+    </div>
+</div>

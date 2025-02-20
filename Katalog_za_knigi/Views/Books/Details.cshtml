@@ -1,0 +1,18 @@
+﻿@model Katalog_za_knigi.DTOs.BookDTO
+
+<div class="container mt-5">
+    <h2 class="text-light text-center">Book Details</h2>
+    <div class="bg-dark text-light p-4 rounded shadow">
+        <p><strong>Title:</strong> @Model.Title</p>
+        <p><strong>Author:</strong> @Model.Author</p>
+        <p><strong>Category:</strong> @Model.Categories.FirstOrDefault(x => x.Id == Model.CategoryId).Name</p>
+        <p><strong>Price:</strong> $@Model.Price</p>
+        <p><strong>Description:</strong> @(Model.Description ?? "Not provided")</p>
+        <p class="text-center">
+            <img src="@Model.ImageUrl" alt="Book Image" width="200" class="img-fluid rounded" />
+        </p>
+        <div class="text-center mt-4">
+            <a asp-action="Index" class="btn btn-primary">Back to List</a>
+        </div>
+    </div>
+</div>

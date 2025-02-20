@@ -1,0 +1,42 @@
+﻿@model Katalog_za_knigi.DTOs.ReaderDTO
+
+<div class="container mt-5">
+    <h2 class="text-center">Edit Reader</h2>
+    <form asp-action="Edit" method="post" class="bg-dark text-light p-4 rounded">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group mb-3">
+            <label>Name</label>
+            <input asp-for="Name" class="form-control bg-secondary text-light border-0" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Email</label>
+            <input asp-for="Email" class="form-control bg-secondary text-light border-0" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Student?</label><br />
+            <div class="form-check">
+                <input asp-for="IsStudent" type="radio" class="form-check-input" value="true" id="isStudentYes" />
+                <label class="form-check-label" for="isStudentYes">Yes</label>
+            </div>
+            <div class="form-check">
+                <input asp-for="IsStudent" type="radio" class="form-check-input" value="false" id="isStudentNo" />
+                <label class="form-check-label" for="isStudentNo">No</label>
+            </div>
+            <span asp-validation-for="IsStudent" class="text-danger"></span>
+        </div>
+
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}

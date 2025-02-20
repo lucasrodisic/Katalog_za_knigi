@@ -1,0 +1,11 @@
+﻿@model Katalog_za_knigi.DTOs.CategoryDTO
+
+<div class="container mt-5">
+    <h2 class="text-light text-center">Category Details</h2>
+    <div class="bg-dark text-light p-4 rounded shadow">
+        <p><strong>Name:</strong> @Model.Name</p>
+        <div class="text-center mt-4">
+            <a asp-action="Index" class="btn btn-primary">Back to List</a>
+        </div>
+    </div>
+</div>

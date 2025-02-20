@@ -1,0 +1,21 @@
+﻿@model Katalog_za_knigi.DTOs.CategoryDTO
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Create Category</h2>
+    <form asp-action="Create" method="post" class="bg-secondary p-4 rounded">
+        <div class="form-group mb-3">
+            <label>Name</label>
+            <input asp-for="Name" class="form-control bg-dark text-light border-light" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}
